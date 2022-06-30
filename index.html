@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<!-- Steal this page! https://github.com/corollari/albert.sh -->
+<html>
+
+<head>
+	<title>Albert Acebrón</title>
+	<meta charset="utf-8" />
+	<!-- <link rel="shortcut icon" href="favicon.gif"> -->
+
+
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
+	<style>
+		.avatar {
+			border-radius: 100%;
+			max-width: 100%;
+			max-height: 100%;
+			width: 50%;
+			margin-bottom: 1.5em;
+		}
+
+		#background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		#prerender {
+			display: none;
+		}
+
+		.main {
+			text-align: center;
+		}
+
+		.icons {
+			text-align: center;
+		}
+
+		.main {
+			background-color: white;
+			opacity: 0.95;
+			border-radius: 4px;
+		}
+
+		header {
+			border-radius: 4px 4px 0 0;
+			padding: 3em 0 0.5em 0;
+		}
+
+		.lower {
+			padding: 0 1.5em 2em 1.5em;
+			border-radius: 4px;
+		}
+
+		.main-col {
+			//padding:0 0 2em 0;
+		}
+
+		.icons>div>a>i:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: inherit;
+			height: inherit;
+			font-size: 1.85rem;
+			line-height: inherit;
+			text-align: center;
+			text-indent: 0;
+		}
+
+		.icons>div>a>i {
+			color: white;
+			background-color: black;
+			text-decoration: none;
+			position: relative;
+			//display: block;
+			width: 3.75em;
+			height: 3.75em;
+			border-radius: 100%;
+			//border: solid 1px #c8cccf;
+			line-height: 3.75em;
+			overflow: hidden;
+			text-align: center;
+			//text-indent: 3.75em;
+			white-space: nowrap;
+		}
+
+		.vertical-center {
+			min-height: 100%;
+			/* Fallback for browsers do NOT support vh unit */
+			min-height: 100vh;
+			/* These two lines are counted as one :-)       */
+
+			display: flex;
+			align-items: center;
+		}
+
+		.main {
+			width: 100%;
+		}
+
+		h1 {
+			font-size: 1.85em;
+		}
+
+		h2 {
+			font-size: 1.5em;
+			margin: 0 0 0.525em 0;
+		}
+
+		h1,
+		h2 {
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			line-height: 2;
+		}
+
+		h1,
+		h2,
+		p {
+			color: #414f57;
+			font-family: "Source Sans Pro", Helvetica, sans-serif;
+			//font-size: 14pt;
+			font-weight: 300;
+		}
+
+		.main-col {
+			margin: 0 0 2em 0;
+		}
+
+		.hackathon-links>a,
+		span {
+			margin-bottom: 0.35em;
+			display: block;
+		}
+	</style>
+</head>
+
+<body class="container vertical-center" onload="loaded()" onresize="loaded()">
+	<canvas id="background" width="100%" height="100%"></canvas>
+	<!--<canvas id="prerender" width="100%" height="100%"></canvas>-->
+	<div class="main">
+		<div class="row">
+			<div class="col-sm">
+			</div>
+			<div class="col-sm">
+				<section>
+					<header>
+						<img class="avatar" src="me.jpg" alt="" />
+						<h1>Albert Acebrón</h1>
+					</header>
+				</section>
+			</div>
+			<div class="col-sm">
+			</div>
+		</div>
+		<div class="lower">
+			<div class="row">
+				<div class="col-sm main-col">
+					<h2>Student<sup>3</sup></h2>
+					<p>Currently an exchange student at Nanyang Technological University in Singapore</p>
+					<p>Majoring in:<br>
+						Mathematics (GPA: 9/10)<br>
+						Computer Science (GPA: 9.2/10)<br>
+						Telecommunications (GPA: 9.2/10)</p>
+					<p>Top 1st (2016-2017), top 5th (2017-2018) and top 6th (2018-2019) by grades in UAB’s Engineering
+						Faculty (~3000 students)<br>
+						First in degree (~300 students) every year</p>
+					<!--Obtained honors in about 80% of all the courses taken-->
+					<p>Taught an <a href="https://aicourse.albert.sh">extracurricular course on AI</a> at Universitat
+						Autònoma de Barcelona
+					</p>
+					<p>Served as R&D vice-director for NTU's blockchain club</p>
+				</div>
+				<div class="col-sm main-col">
+					<h2>Maker</h2>
+					<p>Currently working on <a href="https://onramper.com/">Onramper</a></p>
+					<p><a href="https://binancex.dev/">BinanceX</a> fellow</p>
+					<p>Worked previously at NEO Global Development as a Research Intern, where I co-authored the paper
+						upon which NEO's crosschain protocol is based</p>
+					<!--<p>Co-founder and CTO of <a href="https://altaguardia.com">Alta Guardia</a>, a startup that provides temporal alarms</p>-->
+					<p>Creator of <a href="https://github.com/corollari/SafeSol">SafeSol</a>, a pre-processor for
+						Solidity that was the topic of my talks at Devcon V and <a
+							href="https://youtu.be/z-Hey9pr_jM">ETHCC Paris 2019</a></p>
+					<p>Authored <a href="https://github.com/ethereum/EIPs/pull/1815">EIP 1815</a>, <a
+							href="https://github.com/binance-chain/BEPs/pull/60">BEP 60</a> and <a
+							href="https://github.com/neo-project/proposals/pull/106">two</a> <a
+							href="https://github.com/neo-project/proposals/pull/77">NEPs</a></p>
+					<p>Created <a href="https://waifuchain.moe">WaifuChain</a>, an ERC721 token that allows digital
+						ownership of waifus and aims to provide digital waifus for companionship</p>
+					<p>I have also contributed to several open-source projects, such as the Solidity compiler and
+						Tendermint</p>
+				</div>
+				<div class="col-sm main-col">
+					<h2>Hackathon-goer</h2>
+					<p class="hackathon-links">
+						<a href="https://github.com/corollari/pleBTC">Festival Labs - pleBTC</a>
+						<a href="https://github.com/corollari/yeet-display">Garage@EEE IdeaJam - YEET Display</a>
+						<a href="https://github.com/corollari/treewards">NUS Hack&Roll - treewards</a>
+						<span>Kaspersky Academy Summit - Sirtify</span>
+						<span>Junction X Singapore 2019 - Sirtify</span>
+						<a href="https://github.com/corollari/unlibra">F10 Singapore 2019 - unlibra</a>
+						<a href="https://github.com/corollari/t-dex">DoraHacks Beijing 2019 - t-DEX</a>
+						<a href="https://github.com/deepdao/deepdao">Odyssey 2019 - DeepDAO</a>
+						<a href="https://github.com/solviofoundation/ethparis2019">ETHParis 2019 - Solvio Learn</a>
+						<a href="https://github.com/alex979k/votingplattform">Junction 2018 - On Guard</a>
+						<a href="https://github.com/corollari/shipit">HackUPC 2018 - ShipIt</a>
+						<a href="https://github.com/ArVID220u/latexdictation-hackmit">HackMIT 2018 - Latex Dictation</a>
+						<a href="https://github.com/roni93/TransBot">Wikipedia Hackathon 2018 - Translations Chatbot</a>
+						<a href="https://github.com/corollari/chandlerbot">Copenhacks 2018 - Chandlerbot</a>
+						<span>uCode Zaragoza 2018 - Bootilicious</span>
+						<a href="https://github.com/corollari/inspire">Imagine Express 2018 - Inspire</a>
+						<a href="http://fisioti.me/">Local Hack Day 2017 - FisioTime 0.1</a>
+						<a href="https://github.com/rasmustm/mediq-oxfordhack2017">OxfordHack 2017 - MediQ</a>
+						<a href="https://github.com/corollari/bookityServer">HackUPC 2017 - Bookity</a>
+					</p>
+				</div>
+			</div>
+			<!-- Footer -->
+			<footer class="row icons no-gutters">
+				<div class="col">
+					<a href="https://github.com/corollari"><i class="fa fa-github" title="Github"></i></a>
+				</div>
+				<div class="col">
+					<a href="https://linkedin.com/in/aacebron"><i class="fa fa-linkedin" title="LinkedIn"></i></a>
+				</div>
+				<div class="col">
+					<a href="mailto:me@albert.sh"><i class="fa fa-envelope" title="me@albert.sh"></i></a>
+				</div>
+				<div class="col">
+					<a href="resume.pdf"><i title="Resumé" class="fa fa-file-text"></i></a>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script src="gameoflife.js"></script>
+	<script>
+		var interval;
+		function loaded() {
+			const cellSize = 30;
+			var canvas = document.getElementById('background');
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			var cells = [];
+			var glider = [
+				[0, 1, 0],
+				[0, 0, 1],
+				[1, 1, 1]
+			];
+			var centerY = Math.ceil((canvas.height / cellSize) / 2)
+			var centerX = Math.ceil((canvas.width / cellSize) / 2)
+			for (var i = 0; i < Math.ceil(canvas.height / cellSize); i++) {
+				cells[i] = [];
+				for (var j = 0; j < Math.ceil(canvas.width / cellSize); j++) {
+					cells[i][j] = (i >= centerY - 1 && i <= centerY + 1 && j >= centerX - 1 && j <= centerX + 1 && glider[i - centerY + 1][j - centerX + 1]) + 0; //Sorcery!
+				}
+			}
+			var game = new GameOfLife({
+				canvas_id: "background",
+				cell_width: cellSize,
+				cell_height: cellSize,
+				init_cells: cells,
+				colourful: false
+			});
+			if (interval) {
+				clearInterval(interval);
+			}
+			interval = setInterval(game.step, 100);
+			game.setTheInterval(interval);
+		}
+	</script>
+</body>
+
+</html>
