@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.kym-cdn.com/photos/images/newsfeed/000/273/663/89d.jpg">
+  <img src="https://github.com/franckdun/CV-Albert/blob/main/img/README.PNG">
 </p>
 
 
