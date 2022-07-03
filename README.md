@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/franckdun/CV-Albert/blob/main/img/README.PNG">
+  <a href="https://franckdun.github.io/CV-Albert/"><img src="https://github.com/franckdun/CV-Albert/blob/main/img/README.PNG"></a>
 </p>
 
 
